@@ -90,6 +90,10 @@ Below is the list of functions provided in hxneko-redis.  functions prefixed wit
     public function rpoplpush(source :String, destination :String) :String
     public function rpush(key :String, value :String) :Int
     public function rpushx(key :String, value :String) :Int
+}}}
+
+===Sets===
+{{{
     public function sadd(key :String, members :Array<String>) :Bool
     public function scard(key :String) :Int
     public function sdiff(keys :Array<String>) :Array<String>
