@@ -94,7 +94,7 @@ Below is the list of functions provided in hxneko-redis.  functions prefixed wit
 
 ===Sets===
 {{{
-    public function sadd(key :String, members :Array<String>) :Bool
+    public function sadd(key :String, members :Array<String>) :Int
     public function scard(key :String) :Int
     public function sdiff(keys :Array<String>) :Array<String>
     public function sdiffstore(destination :String, keys :Array<String>) :Bool
@@ -105,7 +105,7 @@ Below is the list of functions provided in hxneko-redis.  functions prefixed wit
     public function smove(source :String, destination :String, member :String) :Bool
     public function spop(key :String) :String
     public function srandmember(key :String) :String 
-    public function srem(key :String, member :String) :Bool
+    public function srem(key :String, members :Array<String>) :Int
     public function sunion(keys :Array<String>) :Array<String>
     public function sunionstore(destination :String, keys :Array<String>) :Bool
 }}}
