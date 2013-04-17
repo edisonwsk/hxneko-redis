@@ -112,7 +112,7 @@ Below is the list of functions provided in hxneko-redis.  functions prefixed wit
 
 ===Sorted Sets===
 {{{
-    public function zadd(key :String, membersscores :Hash<Float>) :Bool
+    public function zadd(key :String, membersscores :Hash<Float>) :Int
     public function zcard(key :String) :Int
     public function zcount(key :String, min :String, max :String) :Int
     public function zincrby(key :String, increment :Float, member :String) :Float
@@ -120,7 +120,7 @@ Below is the list of functions provided in hxneko-redis.  functions prefixed wit
     public function zrange(key :String, start :Int, end :Int, ?withScores :Bool = false) :Array<String>
     public function zrangebyscore(key :String, min :String, max :String, ?withScores :Bool = false, ?offset :Int, ?count :Int) :Array<String>
     public function zrank(key :String, member :String) :Int
-    public function zrem(key :String, member :String) :Bool
+    public function zrem(key :String, member :String) :Int
     public function zremrangebyrank(key :String, start :Int, end :Int) :Int
     public function zremrangebyscore(key :String, min :String, max :String) :Int
     public function zrevrange(key :String, start :Int, end :Int, ?withScores :Bool = false) :Array<String>
