@@ -46,6 +46,7 @@ enum SlaveConfig
  */
 class Redis 
 {
+    private var socket :Socket;
     private var protocol :RedisProtocol;
 	
 	private static inline var EOL :String = "\r\n";
@@ -56,7 +57,7 @@ class Redis
 	{
 		try
 		{
-			var socket = new Socket();
+			socket = new Socket();
 			socket.setTimeout(timeout);
 			socket.connect(new Host(host), port);
 			protocol = new RedisProtocol(socket.input, socket.output);
@@ -914,6 +915,7 @@ class Redis
 	public function quit() :Void
 	{
 		protocol.sendMultiBulkCommand("QUIT", []);
+        socket.close();
 	}
 
 	public function select(index :Int) :Bool
